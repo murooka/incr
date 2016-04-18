@@ -1,0 +1,21 @@
+version: 1
+runtime: go
+api_version: go1
+
+handlers:
+    - url: /public
+      static_dir: public
+      secure: always
+    - url: /.*
+      script: _go_app
+      secure: always
+
+skip_files:
+    - ^(.*/)?app\.yaml
+    - \.gitignore
+    - \.package.json
+    - \.README.md
+    - ^\.git/.*
+    - ^grunt\.js
+    - ^node_modules/(.*/)?
+    - ^assets/(.*/)?

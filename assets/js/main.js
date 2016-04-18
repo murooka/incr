@@ -6,7 +6,7 @@ $(function () {
         var $button = $('#incr-button');
         var $field = $('#incr-field');
         $button.click(function () {
-            count = incr(count);
+                count = incr(parseInt($field.text()));
             $field.text(count);
         });
     })();

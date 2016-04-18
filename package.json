@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "http-server ./public -d",
+    "start": "goapp serve app.yaml",
+    "deploy": "goapp deploy -application hiximurooka app.yaml",
     "js": "browserify assets/js/main.js -o public/js/main.js && cpx assets/vendor/bootstrap/assets/javascripts/bootstrap.min.js public/js",
 	"css": "node-sass --output-style compressed assets/vendor/bootstrap/assets/stylesheets/_bootstrap.scss public/css/bootstrap.css"
   },

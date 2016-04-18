@@ -1,0 +1,20 @@
+{
+  "name": "incr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "http-server ./public -d",
+    "js": "browserify assets/js/main.js -o public/js/main.js && cpx assets/vendor/bootstrap/assets/javascripts/bootstrap.min.js public/js",
+	"css": "node-sass --output-style compressed assets/vendor/bootstrap/assets/stylesheets/_bootstrap.scss public/css/bootstrap.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "13.0.0",
+    "cpx": "1.3.1",
+    "gulp": "3.9.1",
+    "http-server": "0.9.0",
+    "node-sass": "3.4.2"
+  }
+}
